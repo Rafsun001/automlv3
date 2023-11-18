@@ -1,6 +1,6 @@
 
 from flask import Flask, render_template, request, send_file
-import webview
+
 import pandas as pd
 import seaborn as sns
 from sklearn.model_selection import train_test_split
@@ -3937,7 +3937,7 @@ def upload():
 def download_file():
     filename = 'ml-code.py'
     return send_file(filename, as_attachment=True)
-webview.create_window('flask to exe',app)
+#webview.create_window('flask to exe',app)
 
 
 

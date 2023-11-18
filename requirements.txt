@@ -13,3 +13,4 @@ statsmodels==0.14.0
 xgboost==1.7.5
 scipy==1.10.1
 pywebview
+webview

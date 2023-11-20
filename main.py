@@ -40,7 +40,8 @@ def home():
 def upload():
     
     fileWrite=open("ml-code.py", "w")
-    os.chmod("ml-code.py", 0o666)
+    #os.chmod("ml-code.py", 0o666)
+    chmod -R 755 .
     
     fileWrite.write("############################################\n")
     fileWrite.write("#*********Import Basic libraries*********\n")

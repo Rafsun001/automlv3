@@ -11,7 +11,7 @@ automate the whole process (data cleaning, outliers handling, handling high card
 6. Filling missing values.
 
 ## Methods to fill missing values
-#### **1. KNN imputation**
+### **1. KNN imputation**
 K-Nearest Neighbors (KNN) imputation is a technique used to fill missing values in a dataset based on the values of its neighboring data points. 
 
 **Steps in KNN Imputation:**
@@ -28,14 +28,14 @@ K-Nearest Neighbors (KNN) imputation is a technique used to fill missing values 
 
 *6. Repeat for all Missing Values:* Iterate through all missing values in the dataset and repeat the process to impute each missing value.
 
-#### **1. Simple imputation**
+### **1. Simple imputation**
 Simple imputation is a basic technique used in data analysis to handle missing values by filling them in with estimated or calculated values. The idea is to replace missing data points with some plausible values to maintain the structure and integrity of the dataset. 
 
 **Steps in Simple imputation:**
 
-**1. Identify Missing Values:** First, you need to identify the missing values within your dataset. These missing values can occur due to various reasons such as errors in data collection, equipment failure, or human error.
+*1. Identify Missing Values:* First, you need to identify the missing values within your dataset. These missing values can occur due to various reasons such as errors in data collection, equipment failure, or human error.
 
-**2. Choose Imputation Method:** There are several simple imputation methods, each with its own approach:
+*2. Choose Imputation Method:* There are several simple imputation methods, each with its own approach:
 
 *..Mean/Median Imputation:* Replace missing values with the mean or median of the observed values in that column. This method is suitable for numerical data and is less sensitive to outliers compared to the mean.
 
@@ -47,15 +47,15 @@ Simple imputation is a basic technique used in data analysis to handle missing v
 
 *..Constant Imputation:* Replace missing values with a predefined constant value (e.g., replacing missing values in a numerical column with zero).
 
-**3 .Apply Imputation:** Once you've chosen the imputation method that suits your data type and context, apply it to the missing values in your dataset.
+*3 .Apply Imputation:* Once you've chosen the imputation method that suits your data type and context, apply it to the missing values in your dataset.
 
-#### **Fill using mean**
+### **Fill using mean**
 In this method we will compute the mean of numerical column and fill all the missing values of that column using the computed mean value.
 
-#### **Fill using median**
+### **Fill using median**
 In this method we will compute the median of numerical column and fill all the missing values of that column using the computed median value.
 
-#### **Fill using mode**
+### **Fill using mode**
 In this method we will find the mode value of categorical  column and fill all the missing values of that column using the mode value.
 
 ## Outliers Handling
@@ -81,3 +81,49 @@ Any value that falls below Q1 - 1.5 * IQR or above Q3 + 1.5 * IQR is considered 
 Check each data point in your dataset against the defined boundaries:
 Values below Q1 - 1.5 * IQR are considered outliers on the lower end.
 Values above Q3 + 1.5 * IQR are considered outliers on the upper end.
+
+## Graphs and Charts used for EDA
+1. Bar chart
+2. Pie Chart
+3. Histogram
+4. Boxplot
+5. Distplot
+6. Heatmap
+7. Scatterplot
+8. Pairplot
+
+## Encoding
+Encoding is done using label and one-hot encoding method.
+
+**How label encoding works?**
+
+Label encoding, encodes our categorical values in one column. Suppose we have 3 values in a column shirt, pant and watch. What label encoder will do, it will convert shirt into 0,pant into 1, and watch into 2. Here it will not create any new column it will encode in the same column. It means in that column where it will find good there it will use 0, similarly for very good and bad it will use 1 and 2.
+
+**How one-hot encoding works?**
+
+One-hot encoding is a technique used in machine learning to convert categorical data, represented as labels or integers, into a format that can be provided to machine learning algorithms. It's particularly useful when dealing with categorical variables that don't have a numerical relationship between categories.
+
+Suppose you have a categorical feature, such as "Color," with three categories: Red, Green, and Blue
+
+*Step 1:*
+Initially, these categories might be encoded as integers, for example:
+
+Red: 0
+
+Green: 1
+
+Blue: 2
+
+*Step 2:*
+
+Each category is represented as a binary vector.
+For each category, a vector of length equal to the number of unique categories is created.
+Each category's binary vector has all zeros except for a single 1 in the position corresponding to the category index.
+
+For our example:
+
+Red becomes [1, 0, 0]
+
+Green becomes [0, 1, 0]
+
+Blue becomes [0, 0, 1]

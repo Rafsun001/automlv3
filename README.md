@@ -127,3 +127,29 @@ Red becomes [1, 0, 0]
 Green becomes [0, 1, 0]
 
 Blue becomes [0, 0, 1]
+
+## Dropping Low Variance Features
+Dropping low variance features are depends on user. If user want to do then the low variance features will be removed else this step will be skipped. To remove low variance features VarianceThreshold method will be used.
+
+### How VarianceThreshold method works?
+The VarianceThreshold method is a feature selection technique used in machine learning to remove low-variance features from a dataset. It operates on numerical features and identifies those features that have variance below a specified threshold. 
+
+**Here's how it works:**
+
+*1. Variance Calculation:* For each feature (column) in the dataset, the VarianceThreshold computes the variance. Variance measures how much values in a feature vary or spread out from the mean. Features with low variance indicate that most of their values are close to a constant.
+
+*2. Threshold Application:* The method compares the computed variances against a predefined threshold. Features with variance below this threshold are considered to have low variance.
+
+*3. Feature Selection:* The VarianceThreshold then identifies and removes the features that fall below the specified threshold. This process effectively eliminates features that show little variation across the dataset. The assumption here is that these features might not provide much discriminatory information for predictive modeling tasks because they don't change much across samples.
+
+*4. Output:* The result of applying VarianceThreshold is a dataset with reduced dimensionality, containing only the features that have variance above the specified threshold.
+
+## Handling Multicollinearity 
+To handle multicollinearity Variance Inflation Factor(VIF) will be used. If user want to perform multicollinearity only then multicollinearity will be performed else this step will be skipped.
+
+### How Variance Inflation Factor Works?
+If two or multiple independent variables are highly correlated with each other in a regression problem, then it is called multicollinearity. It means, because the independent variables are highly correlated with each other then we can predict one independent variable by another independent variable. This correlation can be a positive correlation or a negative correlation. This problem occurs only in a regression problem.
+
+**Example:**
+Let's take linear regression model for example:
+Suppose we have two independent variables X1 and X2 and dependent variable Y.
